@@ -19,17 +19,18 @@ if %errorlevel%==0 (
     )
 )
 
-echo Instaluje potrzebna biblioteke "requests" (jesli jeszcze jej nie masz)...
-%PY% -m pip install --quiet requests
+echo Instaluje potrzebne biblioteki (requests, openpyxl) jesli jeszcze ich nie masz...
+%PY% -m pip install --quiet requests openpyxl
 
 echo.
-echo Uruchamiam skrypt, to moze potrwac chwile...
+echo Uruchamiam skrypt - to moze potrwac kilkanascie minut, bo przeszukujemy
+echo wiele krajow i fraz naraz. Nie zamykaj tego okna.
 echo.
 %PY% find_app_leads.py
 
 echo.
 echo ============================================
-echo Gotowe. Wyniki sa w pliku app_leads.csv
+echo Gotowe. Wyniki sa w pliku app_leads.xlsx
 echo w tym samym folderze co ten plik .bat
 echo ============================================
 echo.
